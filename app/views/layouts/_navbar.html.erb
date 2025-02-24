@@ -1,2 +1,20 @@
-<nav class="navbar">
-</nav>
+<% unless controller_name == "home" && action_name == "index" %>
+  <nav class="navbar">
+    <!-- Left Side: Company Name -->
+    <div class="logo">
+      <span>Serco</span>
+    </div>
+
+    <!-- Right Side: User Info & Logout -->
+    <div class="user-section">
+        <div class="user-info">
+            <i class="fas fa-user-circle user-icon"></i>
+            <span>John Doe</span>
+        </div>
+        <!-- Dummy Logout Button -->
+        <a href="#" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+  </nav>
+<% end %>

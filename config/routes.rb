@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get "services/index"
   root "home#index"  # Set the homepage as the default page
 
   get "home/index"   # Explicit route for home/index (not necessary, but fine to keep)
+  get '/services', to: 'services#index', as: 'services'
 
   # Health check route
   get "up" => "rails/health#show", as: :rails_health_check

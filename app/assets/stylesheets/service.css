@@ -1,0 +1,199 @@
+/* General Layout */
+.service-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left Section (Filters) */
+.filters {
+    width: 260px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure it stretches full height */
+    overflow-y: auto;
+}
+
+.filters h2 {
+    margin-bottom: 10px;
+}
+
+.filters label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.filters select,
+.filters input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Price Slider */
+#price {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+/* Separator */
+.separator {
+    width: 2px;
+    background: #ddd;
+    height: auto;
+}
+
+/* Right Section (Search & Add Service Button) */
+.service-list {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Search Wrapper */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 250px;  /* Increased width */
+}
+
+/* Search Button with Icon */
+.search-btn {
+    padding: 10px 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn i {
+    font-size: 16px;
+}
+
+/* Add Service Button */
+.add-service-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-service-btn:hover {
+    background: #218838;
+}
+
+/* Dynamic Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0b0c10, #5333ed);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Company Name */
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* User Section */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #ff4757;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #e84118;
+}

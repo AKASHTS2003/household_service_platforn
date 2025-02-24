@@ -16,21 +16,32 @@
 
     <!-- Main Application Styles -->
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css", media: "all" %>
 
-    <!-- Load home.css only for the home page -->
+    <!-- Load CSS based on controller and action -->
     <% if controller_name == "home" && action_name == "index" %>
       <%= stylesheet_link_tag "home", media: "all" %>
+    <% elsif controller_name == "services" && action_name == "index" %>
+      <%= stylesheet_link_tag "service", media: "all" %>
     <% end %>
 
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+
+    <!-- Load JS only on Service Listing Page -->
+    <% if controller_name == "services" && action_name == "index" %>
+      <%= javascript_include_tag "service" %>
+    <% end %>
   </head>
 
   <body>
     <!-- Background Image -->
     <div class="background-image"></div>
 
-    <!-- Include Navbar -->
-    <%= render "layouts/navbar" %>
+    <!-- Conditionally Include Navbar (Skip on Home Page) -->
+    <% unless controller_name == "home" && action_name == "index" %>
+      <%= render "layouts/navbar" %>
+    <% end %>
 
     <!-- Main Content -->
     <div class="content-container">

@@ -1,0 +1,49 @@
+<!-- Service Listing Page -->
+<div class="service-container">
+  <!-- Left Section: Filters -->
+  <aside class="filters">
+    <h2>Filter</h2>
+
+    <label for="category">Category</label>
+    <select id="category">
+      <option>Plumbing</option>
+      <option>Electrical</option>
+      <option>Interior Design</option>
+      <option>CCTV Automation</option>
+    </select>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" placeholder="Enter your city">
+
+    <label for="price">Price Range</label>
+    <input type="range" id="price" min="100" max="10000" step="100">
+    <span id="price-value">100</span>
+
+    <label>Rating</label>
+    <div class="star-rating">
+      <span class="star" data-value="1">☆</span>
+      <span class="star" data-value="2">☆</span>
+      <span class="star" data-value="3">☆</span>
+      <span class="star" data-value="4">☆</span>
+      <span class="star" data-value="5">☆</span>
+    </div>
+  </aside>
+
+  <!-- Separator Line -->
+  <div class="separator"></div>
+
+  <!-- Right Section: Service Provider Listings -->
+  <section class="service-list">
+    <div class="top-bar">
+      <div class="search-wrapper">
+        <input type="text" class="search-bar" placeholder="Search services...">
+        <button class="search-btn">🔍</button>
+      </div>
+      <button class="add-service-btn">+ Add Service Provider</button>
+    </div>
+
+    <div class="service-cards" id="service-cards">
+      <!-- Service cards will be added dynamically -->
+    </div>
+  </section>
+</div>
