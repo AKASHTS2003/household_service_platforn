@@ -17,7 +17,7 @@ Serco is a web platform that connects customers with professional household serv
 ## **Tech Stack**  
 - **Backend:** Ruby on Rails  
 - **Database:** PostgreSQL  
-- **Frontend:** ERB, Bootstrap, Tailwind CSS  
+- **Frontend:** ERB, Bootstrap, CSS  
 - **Authentication:** Devise  
 - **Deployment:** Render (Planned)  
 
